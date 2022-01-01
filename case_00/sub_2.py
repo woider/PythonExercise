@@ -13,10 +13,11 @@ rat = (0, 10, 7.5, 5, 3, 1.5, 1)
 
 pro = float(input('净利润（万元）：'))
 fit = 0
-
+fit2=0
 for i in range(1, len(arr)):
     if (pro > arr[i]):
         fit += (arr[i] - arr[i - 1]) * (rat[i] / 100)
+        fit=fit2+(pro-100)*(1/100)
     else:
         fit += (pro - arr[i - 1]) * (rat[i] / 100)
         break
